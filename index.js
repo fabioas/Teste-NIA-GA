@@ -410,4 +410,4 @@ app.intent('actions.intent.OPTION', (conv, params, option) => {
   }
 });
 
-exports.atendeBB = functions.https.onRequest(app);
+//exports.atendeBB = functions.https.onRequest(app);
