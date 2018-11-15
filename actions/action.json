@@ -17,7 +17,7 @@
   "conversations": {
     "conversation_1": {
       "name": "conversation_1",
-      "url": "https://us-central1-pesquisania-e959e.cloudfunctions.net/atendeBB",
+      "url": "https://testefabiov2.mybluemix.net/fulfillment",
       "fulfillmentApiVersion": 2
     }
   },

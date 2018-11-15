@@ -15,7 +15,7 @@
 'use strict';
 
 const fs = require("fs");
-const functions = require('firebase-functions');
+//const functions = require('firebase-functions');
 const {actionssdk,
        List,
        Permission,
@@ -38,7 +38,8 @@ let tipoAg = '';
 let dista = '';
 let med = '';
 const {ssml} = require('./util');
-const config = functions.config();
+//const config = functions.config();
+
 //const client = maps.createClient({key: keymaps});
 
 let agecc = '';
@@ -55,6 +56,15 @@ const responses = {
   notificationText: 'Veja onde você está...',
 };
 
+//para uso via IBM Cloud
+const bodyParser = require('body-parser');
+const express = require('express');
+
+const port = process.env.PORT || 3000;
+
+const expressApp = express().use(bodyParser.json());
+
+
 /**
    * Gets the city name from results returned by Google Maps reverse geocoding
    * from coordinates.
@@ -65,6 +75,7 @@ const responses = {
 
 
 const app = actionssdk({debug: true, clientId: '786432424698-5adot39n7nv1cj59a75o2l9nfb60db5s.apps.googleusercontent.com',});
+
 
 /* //incluso pra teste de captura de email
 app.intent('actions.intent.SIGN_IN', (conv, input, signin) => {
@@ -410,4 +421,8 @@ app.intent('actions.intent.OPTION', (conv, params, option) => {
   }
 });
 
+//para uso com IBM Cloud
+expressApp.post('/fulfillment', app);
+
+expressApp.listen(port);
 //exports.atendeBB = functions.https.onRequest(app);

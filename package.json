@@ -1,5 +1,5 @@
 {
-  "name": "pesquisa-nia",
+  "name": "testefabiov2",
   "description": "Actions SDK sample for Cloud Functions for Firebase",
   "version": "0.0.1",
   "private": true,
@@ -10,18 +10,18 @@
   },
   "scripts": {
     "lint": "eslint --fix \"**/*.js\"",
-    "start": "firebase serve --only functions",
-    "deploy": "firebase deploy --only functions",
-    "test": "npm run lint"
+    "start": "node index.js"
   },
   "dependencies": {
     "actions-on-google": "^2.0.0",
     "batch-replace": "^1.1.3",
+    "body-parser": "^1.18.3",
     "ent": "^2.2.0",
-    "firebase-admin": "^5.11.0",
+    "express": "^4.16.4",
     "firebase-functions": "^2.0.5",
     "fs": "0.0.1-security",
     "replace-once": "^1.0.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "url-join": "^4.0.0"
   },
