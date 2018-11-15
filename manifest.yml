@@ -8,9 +8,6 @@ applications:
   buildpack: sdk-for-nodejs
   memory: 256M
   instances: 1
-  name: testefabiov2
-  disk_quota: 256M
-  random-route: false
-  timeout: 180
+  name: Teste-NIA-GA
   services:
   - wga-assistant
